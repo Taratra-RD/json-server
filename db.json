@@ -2,7 +2,8 @@
   "users": [
     {
       "id": 0,
-      "name": "RAKOTO"
+      "name": "RAKOTO",
+      "password" :"asazerzafr"
     }
   ]
 }
