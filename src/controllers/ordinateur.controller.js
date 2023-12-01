@@ -4,8 +4,8 @@ module.exports.getOrdinateurs = (req, res) => {
   OrdinateurQuery = "SELECT * FROM Ordinateur";
   db.query(OrdinateurQuery, (error, result) => {
     if (error) {
-      console.error(err);
-      return res.status(500).json({ message: "Internal Server Error" });
+      console.error(error);
+      return res.status(500).json({ message: "Internal Server error" });
     }
     res
       .status(200)
@@ -22,8 +22,8 @@ module.exports.postOrdinateur = (req, res) => {
     [ip, mot_de_passe, categorie_id],
     (error, result) => {
       if (error) {
-        console.error(err);
-        return res.status(500).json({ message: "Internal Server Error" });
+        console.error(error);
+        return res.status(500).json({ message: "Internal Server error" });
       }
       res.status(200).json({ message: "post Ordinateur successfully!" });
     }
@@ -34,9 +34,9 @@ module.exports.getOrdinateur = (req, res) => {
   const { id } = req.params;
   OrdinateurQuery = "SELECT * FROM Ordinateur WHERE id = ?";
   db.query(OrdinateurQuery, [id], (error, result) => {
-    if (err) {
+    if (error) {
       console.error(error);
-      return res.status(500).json({ message: "Internal Server Error" });
+      return res.status(500).json({ message: "Internal Server error" });
     }
     res
       .status(200)
@@ -54,8 +54,8 @@ module.exports.putOrdinateur = (req, res) => {
     [ip, mot_de_passe, categorie_id, id],
     (error, result) => {
       if (error) {
-        console.error(err);
-        return res.status(500).json({ message: "Internal Server Error" });
+        console.error(error);
+        return res.status(500).json({ message: "Internal Server error" });
       }
       res
         .status(200)
@@ -69,8 +69,8 @@ module.exports.deleteOrdinateur = (req, res) => {
   OrdinateurQuery = "DELETE FROM Ordinateur WHERE id = ?";
   db.query(OrdinateurQuery, [id], (error, result) => {
     if (error) {
-      console.error(err);
-      return res.status(500).json({ message: "Internal Server Error" });
+      console.error(error);
+      return res.status(500).json({ message: "Internal Server error" });
     }
     res
       .status(200)

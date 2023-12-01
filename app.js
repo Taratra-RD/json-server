@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const db = require("./src/database/database");
 const {
   adminRoutes,
@@ -20,6 +21,7 @@ const port = 6589;
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 //route
 app
