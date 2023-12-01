@@ -1,0 +1,11 @@
+module.exports.adminRoutes = require("../admin.routes");
+module.exports.autreRoutes = require("../autre.routes");
+module.exports.categoryRoutes = require("../category.routes");
+module.exports.emailRoutes = require("../email.routes");
+module.exports.emplacementRoutes = require("../emplacement.routes");
+module.exports.employeRoutes = require("../employe.routes");
+module.exports.ordinateurRoutes = require("../ordinateur.routes");
+module.exports.proprietaireRoutes = require("../proprietaire.routes");
+module.exports.serveurRoutes = require("../serveur.routes");
+module.exports.wifiRoutes = require("../wifi.routes");
+module.exports.authRoutes = require("../auth.routes");
